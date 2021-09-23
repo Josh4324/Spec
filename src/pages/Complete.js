@@ -41,7 +41,7 @@ export default function Complete(props) {
                 </div>
                 <div class="col-md-6">
                   <div class = "complete-content">
-                  <h2 class="complete-content-title fc-title ">WINNER DETAILS</h2>
+                  <h2 class="complete-content-title fc-title ">Get your Spec Badge</h2>
                   <p class="complete-content-subtitle text-center">Fill in your details to know your spec status</p>
                   <form action="/badge">
                     <div class="form-group">
@@ -60,7 +60,7 @@ export default function Complete(props) {
                     </div>
                     <div class="btn-wrapper text-center">
                       <button class="btn">
-                        <a href={`/badge?score=${score}`}>CONTINUE</a>
+                        <a style={{textDecoration:"none", color:"white"}} href={`/badge?score=${score}`}>CONTINUE</a>
                       </button>
                     </div>
                   </form>
