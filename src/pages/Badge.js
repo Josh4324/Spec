@@ -26,7 +26,7 @@ export default function Badge(props) {
         <header className="header">
             <div class="container">
               <Link to="/" className = "logo">
-                  <img src="../images/logo.svg"/>
+                  <img src="../images/logo.png"/>
               </Link>
             </div>
         </header>

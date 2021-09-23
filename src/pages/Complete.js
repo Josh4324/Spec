@@ -35,8 +35,8 @@ export default function Complete(props) {
           <div class="container">
               <div class="row justify-content-center">
                 <div class="col-md-6 d-flex align-items-center">
-                  <div  style={{ backgroundImage: "url(../images/score-bubble.png)"}} class="spec-score">
-                      <div style={{ width:"50px", marginLeft:"auto", marginRight:"auto", textAlign:"center", marginTop:"50%",fontSize:"40px", color:"black"}}>{score}</div>
+                  <div  style={{ backgroundImage: "url(../images/score-bubble.svg)"}} class="spec-score">
+                      <span>{score}</span>
                   </div>
                 </div>
                 <div class="col-md-6">
