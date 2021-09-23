@@ -34,11 +34,16 @@ export default function Complete(props) {
         <div class="wrapper">
           <div class="container">
               <div class="row justify-content-center">
+                <div class="col-md-6 d-flex align-items-center">
+                  <div  style={{ backgroundImage: "url(../images/score-bubble.png)"}} class="spec-score">
+                      <span>{score}</span>
+                  </div>
+                </div>
                 <div class="col-md-6">
                   <div class = "complete-content">
                   <h2 class="complete-content-title fc-title ">WINNER DETAILS</h2>
                   <p class="complete-content-subtitle text-center">Fill in your details to know your spec status</p>
-                  <form>
+                  <form action="/badge">
                     <div class="form-group">
                       <label>Instagram/Facebook Profile Link</label>
                       <input type="text" className="form-control" placeholder="" />

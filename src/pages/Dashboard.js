@@ -7,7 +7,7 @@ import "../bootstrap.min.css";
 function Dashboard(props) {
   return (
     <>
-      <div className="wrapper-home" style={{ backgroundImage: "url(images/bg.jpg)" }}>
+      <div className="wrapper-home" style={{ backgroundImage: "url(images/bg-new-2.jpg)" }}>
         
 
         <header className="header">
@@ -22,7 +22,7 @@ function Dashboard(props) {
         <div class="main">
           <div class="container">
             <div class="home-title">
-              <img src="images/are_you_a_spec.png" class="home-title-img" />
+              <img src="images/are-you-a-SPEC.png" class="home-title-img" />
             </div>
             <div class="row justify-content-center">
               <div class="col-md-5">

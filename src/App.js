@@ -6,10 +6,10 @@ import { connect } from "react-redux";
 import "react-notifications/lib/notifications.css";
 import "./style.css";
 import "./App.css";
-import Quiz from "./pages/Quiz";
 import MaleQuiz from "./pages/MaleQuiz";
 import FemaleQuiz from "./pages/FemaleQuiz";
 import Complete from "./pages/Complete";
+import Badge from "./pages/Badge";
 
 function App(props) {
   return (
@@ -18,6 +18,7 @@ function App(props) {
         <Switch>
           <Route path="/" exact component={Dashboard} />
           <Route path="/congrat" exact component={Complete} />
+          <Route path="/badge" exact component={Badge} />
           <Route path="/quiz/male" exact component={MaleQuiz} />
           <Route path="/quiz/female" exact component={FemaleQuiz} />
         </Switch>
