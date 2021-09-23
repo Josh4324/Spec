@@ -39,7 +39,14 @@ export default function Badge(props) {
                     
                     <div class="divider"></div>
                     <h2 class="fc-title sec-title text-center pt-50 mb-3">Share your SPEC Status Badge</h2>
-                    <img src="../images/badge-specless.png" class="spec-badge mb-2"/>
+                    {
+                      score <= 30 ? <img src="../images/badge-specless.png" class="spec-badge mb-2"/> : 
+                      score > 30 && score <= 40 ? <img src="../images/badge-specupcoming.png" class="spec-badge mb-2"/> : 
+                      score > 40 && score <= 50 ? <img src="../images/badge-specmaking.png" class="spec-badge mb-2"/> : 
+                      score > 50 && score <= 60 ? <img src="../images/badge-specful.png" class="spec-badge mb-2"/> : 
+                      score > 60 ? <img src="../images/badge-spectacular.png" class="spec-badge mb-2"/> : null
+                    }
+      
                     <div class="share-button text-center mt-4">
                         <Link to="/" className = "btn btn-block download-button">Download your SPEC badge and upload</Link>
                         <span class="share-text mt-3 mb-1">Share on:</span> 
