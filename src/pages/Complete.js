@@ -60,7 +60,7 @@ export default function Complete(props) {
                     </div>
                     <div class="btn-wrapper text-center">
                       <button class="btn">
-                        CONTINUE
+                        <a href={`/badge?score=${score}`}>CONTINUE</a>
                       </button>
                     </div>
                   </form>
