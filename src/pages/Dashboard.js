@@ -7,88 +7,57 @@ import "../bootstrap.min.css";
 function Dashboard(props) {
   return (
     <>
-      <div style={{ height: "100vh" }}>
-        <div className="header">
-          <Link to="/">
-            <div
-              className="logo"
-              style={{ padding: "10px", border: "3px solid #4f9265" }}
-            >
-              SPECSTATUS
+      <div className="wrapper-home" style={{ backgroundImage: "url(images/bg.jpg)" }}>
+        
+
+        <header className="header">
+          <div class="container">
+            
+            <Link to="/" className = "logo">
+                <img src="images/logo.png"/>
+            </Link>
+          </div>
+        </header>
+
+        <div class="main">
+          <div class="container">
+            <div class="home-title">
+              <img src="images/are_you_a_spec.png" class="home-title-img" />
             </div>
-          </Link>
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                <div class="home-spec-info">
+                  <h2><span>Hey Ladies,</span><br/> Do you have a SPEC?</h2>
+                  <p>Here’s a chance to check just how much of a SPEC your SPEC is.</p>
+                  <Link to="/quiz/female" class="home-spec-info__link">
+                    <span>Take the Quiz</span>
+                    Check the SPEC status of your SPEC
+                  </Link>
+                </div>
+              </div>
+              <div class="col-md-5">
+              <div class="home-spec-info">
+                  <h2><span>Hey Guys,</span><br/> Are you a SPEC?</h2>
+                  <p>Here’s a chance to check just how much of a SPEC you are.</p>
+                  <Link to="/quiz/male" class="home-spec-info__link">
+                    <span>Take the Quiz</span>
+                    Check Your SPEC Status
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "60%",
-            marginTop: "10%",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          <div>
-            <div style={{ textAlign: "center", marginTop: "18%" }}>
-              <h5 style={{ width: "400px" }}>
-                Hey Ladies, Do you have a SPEC? Here’s a chance to check just
-                how much of a SPEC your SPEC is.
-              </h5>
+
+        <div class="footer">
+          <div class="container">
+            <div class="col-md-12">
+              <span>TERMS OF USE/ PRIVACY</span>
             </div>
-            <Link to="/quiz/female">
-              <div
-                style={{
-                  textAlign: "center",
-                  padding: "15px",
-                  border: "5px solid #4f9265",
-                  width: "200px",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  marginTop: "10px",
-                }}
-              >
-                TAKE A QUIZ
-              </div>
-            </Link>
-          </div>
-          <div>
-            <div style={{ textAlign: "center", marginTop: "18%" }}>
-              <h5 style={{ width: "400px" }}>
-                Hey Guys, Are you a SPEC? Here’s a chance to check just how much
-                of a SPEC you are. Lets go
-              </h5>
-            </div>
-            <Link to="/quiz/male">
-              <div
-                style={{
-                  textAlign: "center",
-                  padding: "15px",
-                  border: "5px solid #4f9265",
-                  width: "200px",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  marginTop: "10px",
-                }}
-              >
-                TAKE A QUIZ
-              </div>
-            </Link>
           </div>
         </div>
-        <div
-          style={{
-            position: "fixed",
-            width: "100%",
-            bottom: "0px",
-            display: "flex",
-            padding: "20px",
-            justifyContent: "space-between",
-          }}
-        >
-          <span>TERMS OF USE | PRIVACY</span>
-          <span>FOLLOW US</span>
-        </div>
+
       </div>
     </>
   );

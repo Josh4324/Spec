@@ -17,7 +17,6 @@ function App(props) {
       <Router>
         <Switch>
           <Route path="/" exact component={Dashboard} />
-          <Route path="/quiz" exact component={Quiz} />
           <Route path="/congrat" exact component={Complete} />
           <Route path="/quiz/male" exact component={MaleQuiz} />
           <Route path="/quiz/female" exact component={FemaleQuiz} />
@@ -30,7 +29,7 @@ function App(props) {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.auth,
+    user: state.auth
   };
 };
 

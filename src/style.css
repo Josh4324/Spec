@@ -31,12 +31,12 @@ body {
 
 ::selection {
   color: #fff;
-  background-color: #ed1b34;
+  background-color: #2fa703;
 }
 
 ::-moz-selection {
   color: #fff;
-  background-color: #ed1b34;
+  background-color: #2fa703;
 }
 
 ul {
@@ -52,7 +52,8 @@ a {
   text-decoration: none;
   transition: 0.3s all ease-in-out;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -94,7 +95,8 @@ select:visited {
   box-shadow: none;
 }
 
-p, label {
+p,
+label {
   margin: 0;
 }
 
@@ -112,11 +114,11 @@ h6 {
   padding-top: 150px;
 }
 
-.multisteps-form__panel[data-animation=scaleOut] {
+.multisteps-form__panel[data-animation="scaleOut"] {
   transform: scale(1.1);
 }
 
-.multisteps-form__panel[data-animation=scaleOut].js-active {
+.multisteps-form__panel[data-animation="scaleOut"].js-active {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -124,11 +126,11 @@ h6 {
   transform: scale(1);
 }
 
-.multisteps-form__panel[data-animation=slideHorz] {
+.multisteps-form__panel[data-animation="slideHorz"] {
   left: -50px;
 }
 
-.multisteps-form__panel[data-animation=slideHorz].js-active {
+.multisteps-form__panel[data-animation="slideHorz"].js-active {
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
@@ -136,11 +138,11 @@ h6 {
   left: 0;
 }
 
-.multisteps-form__panel[data-animation=slideVert] {
+.multisteps-form__panel[data-animation="slideVert"] {
   top: 30px;
 }
 
-.multisteps-form__panel[data-animation=slideVert].js-active {
+.multisteps-form__panel[data-animation="slideVert"].js-active {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -148,18 +150,18 @@ h6 {
   top: 0;
 }
 
-.multisteps-form__panel[data-animation=fadeIn].js-active {
+.multisteps-form__panel[data-animation="fadeIn"].js-active {
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: linear;
   transition-delay: 0s;
 }
 
-.multisteps-form__panel[data-animation=scaleIn] {
+.multisteps-form__panel[data-animation="scaleIn"] {
   transform: scale(0.9);
 }
 
-.multisteps-form__panel[data-animation=scaleIn].js-active {
+.multisteps-form__panel[data-animation="scaleIn"].js-active {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -189,46 +191,46 @@ multistep css
   overflow: visible;
   height: auto;
 }
-.multisteps-form__panel[data-animation=scaleOut] {
+.multisteps-form__panel[data-animation="scaleOut"] {
   transform: scale(1.1);
 }
-.multisteps-form__panel[data-animation=scaleOut].js-active {
+.multisteps-form__panel[data-animation="scaleOut"].js-active {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
   transform: scale(1);
 }
-.multisteps-form__panel[data-animation=slideHorz] {
+.multisteps-form__panel[data-animation="slideHorz"] {
   left: -50px;
 }
-.multisteps-form__panel[data-animation=slideHorz].js-active {
+.multisteps-form__panel[data-animation="slideHorz"].js-active {
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
   transition-delay: 0s;
   left: 0;
 }
-.multisteps-form__panel[data-animation=slideVert] {
+.multisteps-form__panel[data-animation="slideVert"] {
   top: 30px;
 }
-.multisteps-form__panel[data-animation=slideVert].js-active {
+.multisteps-form__panel[data-animation="slideVert"].js-active {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
   top: 0;
 }
-.multisteps-form__panel[data-animation=fadeIn].js-active {
+.multisteps-form__panel[data-animation="fadeIn"].js-active {
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: linear;
   transition-delay: 0s;
 }
-.multisteps-form__panel[data-animation=scaleIn] {
+.multisteps-form__panel[data-animation="scaleIn"] {
   transform: scale(0.9);
 }
-.multisteps-form__panel[data-animation=scaleIn].js-active {
+.multisteps-form__panel[data-animation="scaleIn"].js-active {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -239,31 +241,30 @@ multistep css
 .actions {
   width: 100%;
   border-radius: 4px;
-  padding: 20px 30px;
-  background-color: #4f9265;
+  padding: 0px 7px 20px 7px;
 }
 .actions li {
-  color: #3c3c3c;
+  color: #ffffff;
   height: 65px;
   width: 430px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   text-align: center;
   line-height: 65px;
   border-radius: 3px;
   display: inline-block;
-  background-color: #fff;
+  background-color: #2fa703;
   text-transform: uppercase;
   transition: 0.3s all ease-in-out;
 }
 .actions li:hover {
   color: #fff;
-  background-color: #eb3252;
+  background-color: #227d01;
 }
 .actions li button {
   color: #fff;
-  background-color: #eb3252;
+  background-color: #2fa703;
   font-weight: bold;
 }
 .actions li:nth-child(1) {
@@ -272,10 +273,22 @@ multistep css
 .actions li:nth-child(2) {
   float: right;
 }
-.actions li span, .actions li button {
+.actions li span,
+.actions li button {
   width: 100%;
   display: block;
   border: none;
+}
+.notification {
+  box-shadow: none !important;
+}
+.btn-disabled,
+.btn-disabled:hover {
+  opacity: 0.2 !important;
+  cursor: default;
+}
+.actions li.btn-disabled:hover {
+  background-color: #2fa703;
 }
 
 .quiz-progress-area .progress {
@@ -309,7 +322,7 @@ multistep css
   bottom: -10px;
   position: absolute;
   transform: translateX(-50%);
-  border-top: 10px solid #ed1b34;
+  border-top: 10px solid #2fa703;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
@@ -348,7 +361,7 @@ multistep css
   top: 0;
   right: -12px;
   content: ":";
-  color: #ed1b34;
+  color: #2fa703;
   font-size: 30px;
   position: absolute;
 }
@@ -362,23 +375,22 @@ multistep css
 }
 .quiz-top-area .quiz-countdown .count-unit {
   display: block;
-  color: #ed1b34;
+  color: #2fa703;
   margin-top: 5px;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .wizard-forms {
-  padding: 90px 30px;
+  padding: 90px 0px;
 }
 
 .quiz-title {
   margin: 0 auto;
-  max-width: 800px;
 }
 .quiz-title span {
   font-size: 25px;
-  color: #ed1b34;
+  color: #2fa703;
 }
 .quiz-title h2 {
   color: #151515;
@@ -388,9 +400,9 @@ multistep css
   font-family: "Poppins";
 }
 .quiz-title p {
-  color: #151515;
-  font-size: 24px;
-  font-weight: 500;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 600;
 }
 
 .quiz-option-selector {
@@ -400,44 +412,53 @@ multistep css
   padding-bottom: 80px;
 }
 .quiz-option-selector li {
-  width: 50%;
+  width: 33%;
   float: left;
   padding: 7px;
 }
 .quiz-option-selector li label {
+  display: flex;
+  align-items: center;
   z-index: 2;
   width: 100%;
   height: 90px;
   padding: 10px;
   cursor: pointer;
   position: relative;
-  border-radius: 4px;
-  background-color: #fff;
+  border-radius: 3px;
   border: 2px solid #e7e7e7;
+}
+.quiz-option-selector li label.quiz-item-active {
+  border: 2px solid #2fa703;
 }
 .quiz-option-selector li label .exp-number {
   float: left;
-  width: 75px;
-  height: 68px;
+  width: 40px;
+  height: 40px;
   z-index: 2;
   display: block;
-  color: #446d76;
-  font-size: 30px;
+  color: #fff;
+  font-size: 21px;
   font-weight: 700;
-  line-height: 68px;
+  line-height: 40px;
   position: relative;
-  margin-right: 45px;
+  margin-right: 15px;
   text-align: center;
-  background-color: #fff;
-  border: 2px solid #e7e7e7;
+  background-color: transparent;
+}
+.quiz-option-selector li label.quiz-item-active .exp-number {
+  color: #2fa703;
 }
 .quiz-option-selector li label .exp-label {
   z-index: 2;
-  color: #446d76;
-  font-size: 23px;
+  color: #fff;
+  font-size: 21px;
   font-weight: 600;
-  line-height: 70px;
+  line-height: 1;
   position: relative;
+}
+.quiz-option-selector li label.quiz-item-active .exp-label {
+  color: #2fa703 !important;
 }
 .quiz-option-selector li label .checkmark-border {
   height: 100%;
@@ -447,7 +468,8 @@ multistep css
   z-index: 1;
   position: absolute;
 }
-.quiz-option-selector li label .checkmark-border:before, .quiz-option-selector li label .checkmark-border:after {
+.quiz-option-selector li label .checkmark-border:before,
+.quiz-option-selector li label .checkmark-border:after {
   top: 0;
   left: 0;
   z-index: -1;
@@ -465,7 +487,8 @@ multistep css
 .quiz-option-selector li .exp-option-box {
   display: none;
 }
-.quiz-option-selector li .exp-option-box:checked ~ .checkmark-border:before, .quiz-option-selector li .exp-option-box:checked ~ .checkmark-border:after {
+.quiz-option-selector li .exp-option-box:checked ~ .checkmark-border:before,
+.quiz-option-selector li .exp-option-box:checked ~ .checkmark-border:after {
   display: block;
 }
 .quiz-option-selector li .exp-option-box:checked ~ .exp-label {
@@ -503,9 +526,9 @@ multistep css
   float: right;
   font-size: 17px;
   font-weight: 700;
-  color: #ed1b34;
+  color: #2fa703;
   font-family: "Poppins";
-  border-bottom: 2px solid #ed1b34;
+  border-bottom: 2px solid #2fa703;
 }
 
 .quiz-details-option {
@@ -550,14 +573,14 @@ multistep css
   position: absolute;
   border-radius: 100%;
   transform: translateY(-50%);
-  border: 2px solid #ed1b34;
+  border: 2px solid #2fa703;
 }
 .quiz-details-option .exp-option-box:checked ~ .select-area {
-  border: 2px solid #ed1b34;
+  border: 2px solid #2fa703;
 }
 .quiz-details-option .exp-option-box:checked ~ .select-area:before {
   box-shadow: none;
-  background-color: #ed1b34;
+  background-color: #2fa703;
 }
 .quiz-details-option .exp-option-box:checked ~ .select-area:after {
   display: block;
@@ -593,10 +616,10 @@ multistep css
   padding: 20px 0px 20px 70px;
 }
 .quiz-option-area .exp-option-box:checked ~ .quiz-option-serial {
-  background-color: #ed1b34;
+  background-color: #2fa703;
 }
 .quiz-option-area .exp-option-box:checked ~ .quiz-option-img {
-  border: 1px solid #ed1b34;
+  border: 1px solid #2fa703;
 }
 
 .thankyou-msg p {
@@ -663,14 +686,14 @@ multistep css
 }
 @media screen and (max-width: 580px) {
   .actions li:nth-child(2),
-.actions li:nth-child(1) {
+  .actions li:nth-child(1) {
     float: none;
     margin: 0 auto;
-    width: 250px;
-    height: 50px;
+    width: 100%;
+    height: 70px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 70px;
   }
 
   .actions li:nth-child(1) {
@@ -689,15 +712,20 @@ multistep css
   .quiz-progress-area .progress .progress-bar span {
     display: none;
   }
-
+  .quiz-option-selector {
+    padding-bottom: 40px;
+  }
   .quiz-title h2 {
     font-size: 30px;
   }
 
   .quiz-title span,
-.quiz-title p,
-.quiz-option-selector li label .exp-label {
-    font-size: 20px;
+  .quiz-title p,
+  .quiz-option-selector li label .exp-label {
+    font-size: 18px;
+  }
+  .quiz-title p {
+    font-size: 26px;
   }
 
   .quiz-option-selector li label .exp-number {

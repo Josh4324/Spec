@@ -1,3 +1,6 @@
+body {
+  font-family: "Futura", sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -5,6 +8,43 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.wrapper-home {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.wrapper-question {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.wrapper-complete {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 50px;
+}
+.fc-title {
+  font-family: "Futura Condensed";
+}
+.btn {
+  background: #2fa703;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 600;
+  padding: 10px 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,13 +56,89 @@
 .header {
   display: flex;
   justify-content: space-between;
+  padding-top: 50px;
 }
 
 .logo {
-  margin-top: 30px;
-  margin-left: 30px;
+  display: inline-block;
+}
+.logo img {
+  height: 40px;
+}
+.home-title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.home-title .home-title-img {
+  max-height: 150px;
+  display: inline-block;
+}
+.home-spec-info {
+  padding: 30px;
+  padding-top: 20px;
+  border: 1px solid rgb(50 176 3 / 95%);
+  background: rgb(50 176 3 / 35%);
+  background: #000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.home-spec-info h2 {
+  font-family: "Futura" arial;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 13px;
+}
+.home-spec-info h2 span {
+  font-size: 20px;
+}
+.home-spec-info .home-spec-info__link {
+  display: inline-block;
+  background: #2fa703;
+  color: #fff;
+  padding: 12px;
+  min-width: 280px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+.home-spec-info .home-spec-info__link span {
+  display: block;
+  font-weight: 600;
+}
+.complete-content {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+.complete-content-title {
+  font-family: "Futura COndensed";
+  font-size: 50px;
+  color: #2fa703;
+  text-align: center;
+}
+.complete-content-subtitle {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
+.form-group label {
+  color: #ccc;
+}
+.form-group .form-control {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #707070;
+  border-radius: 0;
+  height: 30px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+.form-group .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
 .blue {
   background-color: #61dafb;
 }
@@ -36,7 +152,6 @@ a:hover {
   background: transparent;
 }
 
-
 .navlist {
   list-style: none;
   display: flex;
@@ -48,8 +163,7 @@ a:hover {
 
 .back {
   color: white;
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #4f9265 35%, rgba(0,212,255,1) 100%);
+  background: #000;
 }
 
 .App-header {
@@ -67,6 +181,14 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #4f9265 35%, rgba(0,212,25
   color: #61dafb;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  padding: 20px 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -80,8 +202,8 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #4f9265 35%, rgba(0,212,25
 .loader:before,
 .loader:after {
   border-radius: 50%;
-  width: 2.0em;
-  height: 2.0em;
+  width: 2em;
+  height: 2em;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation: load7 1.8s infinite ease-in-out;
@@ -103,7 +225,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #4f9265 35%, rgba(0,212,25
 }
 .loader:before,
 .loader:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
 }

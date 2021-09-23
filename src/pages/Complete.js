@@ -22,105 +22,49 @@ export default function Complete(props) {
   }
   return (
     <>
-      <div style={{ height: "100vh" }}>
-        <div className="header">
-          <Link to="/">
-            <div
-              className="logo"
-              style={{ padding: "10px", border: "3px solid #4f9265" }}
-            >
-              SPECSTATUS
+      <div class="wrapper-complete" style={{ backgroundImage: "url(../images/question-bg.jpg)" }}>
+        <header className="header">
+            <div class="container">
+              <Link to="/" className = "logo">
+                  <img src="../images/logo.png"/>
+              </Link>
             </div>
-          </Link>
-        </div>
+        </header>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "60%",
-            marginTop: "5%",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          <div>
-            <h2 style={{ marginBottom: "30px" }}>WINNER DETAILS</h2>
-            <form>
-              <div style={{ marginBottom: "20px" }}>
-                <div>
-                  <label>Facebook Handle</label>
-                </div>
-                <input
-                  type="text"
-                  style={{
-                    width: "100%",
-                    border: 0,
-                    borderBottom: "1px solid white",
-                  }}
-                  className="remove"
-                />
-              </div>
+        <div class="wrapper">
+          <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <div class = "complete-content">
+                  <h2 class="complete-content-title fc-title ">WINNER DETAILS</h2>
+                  <p class="complete-content-subtitle text-center">Fill in your details to know your spec status</p>
+                  <form>
+                    <div class="form-group">
+                      <label>Instagram/Facebook Profile Link</label>
+                      <input type="text" className="form-control" placeholder="" />
+                    </div>
 
-              <div style={{ marginBottom: "20px" }}>
-                <div>
-                  <label>Email Address</label>
-                </div>
-                <input
-                  style={{
-                    width: "100%",
-                    border: 0,
-                    borderBottom: "1px solid white",
-                  }}
-                  className="remove"
-                  type="email"
-                />
-              </div>
+                    <div class="form-group">
+                      <label>Email Address</label>
+                      <input type="email" className="form-control" />
+                    </div>
 
-              <div style={{ marginBottom: "20px" }}>
-                <div>
-                  <label>Phone Number</label>
+                    <div class="form-group">
+                      <label>Phone Number</label>
+                      <input type="text" className="form-control" />
+                    </div>
+                    <div class="btn-wrapper text-center">
+                      <button class="btn">
+                        CONTINUE
+                      </button>
+                    </div>
+                  </form>
+                  </div>
                 </div>
-                <input
-                  style={{
-                    width: "100%",
-                    border: 0,
-                    borderBottom: "1px solid white",
-                  }}
-                  className="remove"
-                />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  marginTop: "20px",
-                }}
-              >
-                <button
-                  style={{
-                    backgroundColor: "transparent",
-                    color: "white",
-                    borderRadius: "5px",
-                    padding: "10px",
-                  }}
-                >
-                  SHARE
-                </button>
-                <button
-                  style={{
-                    backgroundColor: "transparent",
-                    color: "white",
-                    borderRadius: "5px",
-                    padding: "10px",
-                  }}
-                >
-                  DOWNLOAD
-                </button>
-              </div>
-            </form>
-          </div>
-          <div style={{ width: "50%" }}>
+            </div>
+
+          {/* <div style={{ width: "50%" }}>
             <div
               style={{
                 width: "200px",
@@ -143,21 +87,16 @@ export default function Complete(props) {
               </h1>
             </div>
             <h2>{details}</h2>
+          </div> */}
+        
+        </div>
+        <div class="footer">
+        <div class="container">
+          <div class="col-md-12">
+            <span>TERMS OF USE/ PRIVACY</span>
           </div>
         </div>
-        <div
-          style={{
-            position: "fixed",
-            width: "100%",
-            bottom: "0px",
-            display: "flex",
-            padding: "20px",
-            justifyContent: "space-between",
-          }}
-        >
-          <span>TERMS OF USE | PRIVACY</span>
-          <span>FOLLOW US</span>
-        </div>
+      </div>
       </div>
     </>
   );
