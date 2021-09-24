@@ -5,6 +5,7 @@ import { FemaleQuestions } from "../data";
 import "../style.css";
 export default function FemaleQuiz() {
   let history = useHistory();
+  let check = 'ontouchstart' in window ? true : false;
   const [questionNum, setQuestionNum] = useState(0);
   const [current, setCurrent] = useState(FemaleQuestions[0]);
   const [score, setScore] = useState(0);
@@ -217,7 +218,27 @@ export default function FemaleQuiz() {
                       Previous Question
                     </span>
                   </li>
-                  <li onTouchEnd={setQuestion} onClick={setQuestion}
+
+                  {
+                    check === true ? (<li onTouchEnd={setQuestion}
+                      className={
+                        option1State ||
+                        option2State ||
+                        option3State ||
+                        option4State ||
+                        option5State == true
+                          ? ""
+                          : "btn-disabled"
+                      }
+                    >
+                      <span
+                        class="js-btn-next"
+                        title="NEXT"
+                      >
+                        Next Question
+                      </span>
+                    </li>
+                  ) : (<li onClick={setQuestion}
                     className={
                       option1State ||
                       option2State ||
@@ -229,13 +250,13 @@ export default function FemaleQuiz() {
                     }
                   >
                     <span
-                      
                       class="js-btn-next"
                       title="NEXT"
                     >
                       Next Question
                     </span>
-                  </li>
+                  </li>)
+                  }
                 </ul>
               </div>
             </div>

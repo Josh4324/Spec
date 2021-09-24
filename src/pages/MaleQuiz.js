@@ -222,7 +222,26 @@ export default function MaleQuiz() {
                       Previous Question
                     </span>
                   </li>
-                  <li onTouchEnd={setQuestion} onClick={setQuestion}
+                  {
+                    check === true ? (<li onTouchEnd={setQuestion}
+                      className={
+                        option1State ||
+                        option2State ||
+                        option3State ||
+                        option4State ||
+                        option5State == true
+                          ? ""
+                          : "btn-disabled"
+                      }
+                    >
+                      <span
+                        class="js-btn-next"
+                        title="NEXT"
+                      >
+                        Next Question
+                      </span>
+                    </li>
+                  ) : (<li onClick={setQuestion}
                     className={
                       option1State ||
                       option2State ||
@@ -239,7 +258,11 @@ export default function MaleQuiz() {
                     >
                       Next Question
                     </span>
-                  </li>
+                  </li>)
+                  }
+                  
+                
+                
                 </ul>
               </div>
             </div>

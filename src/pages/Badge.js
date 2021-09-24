@@ -66,7 +66,7 @@ export default function Badge(props) {
             target="_blank"
             rel="noopener noreferrer"
             className = "share-button mr-2"
-            href={`https://www.facebook.com/sharer.php?u=${"/"}?imageurl=${image}`}>
+            href={`https://www.facebook.com/sharer.php?u=${window.location.h}?imageurl=${image}`}>
             <i class="fab fa-facebook-square"></i>
           </a>
                         <Link to="/" className = "share-button"><i class="fab fa-twitter-square"></i></Link>
