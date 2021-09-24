@@ -217,7 +217,7 @@ export default function MaleQuiz() {
                       Previous Question
                     </span>
                   </li>
-                  <li  onClick={setQuestion} onTouchStart={setQuestionNum}
+                  <li  onClick={setQuestion}
                     className={
                       option1State ||
                       option2State ||
