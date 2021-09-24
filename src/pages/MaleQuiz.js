@@ -17,6 +17,22 @@ export default function MaleQuiz() {
   const [option4State, setoption4State] = useState(false);
   const [option5State, setoption5State] = useState(false);
 
+  function iOS() {
+    return [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ].includes(navigator.platform)
+    // iPad on iOS 13 detection
+    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  }
+
+  let ios = iOS();
+  console.log("ios", ios)
+
   let check = 'ontouchstart' in window ? true : false;
   
 console.log(check);
@@ -222,7 +238,7 @@ console.log(check);
                     </span>
                   </li>
                   {
-                    check === true ? (<li onTouchEnd={setQuestion}
+                    ios === true ? (<li onTouchEnd={setQuestion}
                       className={
                         option1State ||
                         option2State ||

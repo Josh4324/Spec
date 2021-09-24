@@ -5,6 +5,21 @@ import { FemaleQuestions } from "../data";
 import "../style.css";
 export default function FemaleQuiz() {
   let history = useHistory();
+  function iOS() {
+    return [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ].includes(navigator.platform)
+    // iPad on iOS 13 detection
+    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  }
+
+  let ios = iOS();
+  console.log("ios", ios)
   let check = 'ontouchstart' in window ? true : false;
   console.log(check);
   const [questionNum, setQuestionNum] = useState(0);
@@ -221,7 +236,7 @@ export default function FemaleQuiz() {
                   </li>
 
                   {
-                    check === true ? (<li onTouchEnd={setQuestion}
+                    ios === true ? (<li onTouchEnd={setQuestion}
                       className={
                         option1State ||
                         option2State ||
