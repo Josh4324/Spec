@@ -68,6 +68,12 @@ body {
 .pt-50 {
   padding-top: 50px;
 }
+
+@media  (max-width: 500px){
+  .spec-badge{
+    max-width: 300px;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
