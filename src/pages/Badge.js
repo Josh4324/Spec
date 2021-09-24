@@ -96,13 +96,13 @@ export default function Badge(props) {
             target="_blank"
             rel="noopener noreferrer"
             className = "share-button mr-2"
-            href={`https://www.facebook.com/sharer.php?u=${`https://checkspecstatus.com/images/${image}`}&app_id=357174444840738`}>
+            href={`https://www.facebook.com/sharer.php?u=${`https://checkspecstatus.com/images/${image}`}`}>
             <i class="fab fa-facebook-square"></i>
           </a>
                         <a                         
             target="_blank"
             rel="noopener noreferrer"
-            className = "share-button mr-2" href={`https://twitter.com/share?text=https://checkspecstatus.com/congrat`}><i class="fab fa-twitter-square"></i></a> 
+            className = "share-button mr-2" href={`https://twitter.com/share?text=https://checkspecstatus.com/images/${image}`}><i class="fab fa-twitter-square"></i></a> 
                     </div>
                   </div>
                 </div>
