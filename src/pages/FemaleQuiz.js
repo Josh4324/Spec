@@ -6,6 +6,7 @@ import "../style.css";
 export default function FemaleQuiz() {
   let history = useHistory();
   let check = 'ontouchstart' in window ? true : false;
+  console.log(check);
   const [questionNum, setQuestionNum] = useState(0);
   const [current, setCurrent] = useState(FemaleQuestions[0]);
   const [score, setScore] = useState(0);

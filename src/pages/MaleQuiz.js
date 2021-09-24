@@ -18,9 +18,8 @@ export default function MaleQuiz() {
   const [option5State, setoption5State] = useState(false);
 
   let check = 'ontouchstart' in window ? true : false;
-  console.log(check)
   
-
+console.log(check);
   useEffect(() => {
     topFunction();
     return () => {};
