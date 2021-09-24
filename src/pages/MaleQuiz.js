@@ -95,7 +95,7 @@ export default function MaleQuiz() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   };
-  let onCheck = check === false ? window.onTouchStart={setQuestion} : window.onClick={setQuestion}
+  
   return (
     <div
       className="wrapper-question"
@@ -222,7 +222,7 @@ export default function MaleQuiz() {
                       Previous Question
                     </span>
                   </li>
-                  <li onTouchStart={setQuestion} onClick={setQuestion}
+                  <li onTouchEnd={setQuestion} onClick={setQuestion}
                     className={
                       option1State ||
                       option2State ||

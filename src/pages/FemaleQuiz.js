@@ -217,7 +217,7 @@ export default function FemaleQuiz() {
                       Previous Question
                     </span>
                   </li>
-                  <li onClick={setQuestion}
+                  <li onTouchEnd={setQuestion} onClick={setQuestion}
                     className={
                       option1State ||
                       option2State ||
