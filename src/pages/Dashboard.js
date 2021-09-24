@@ -25,16 +25,7 @@ function Dashboard(props) {
               <img src="images/are-you-a-sp.png" class="home-title-img" />
             </div>
             <div class="row justify-content-center">
-              <div class="col-md-5">
-                <div class="home-spec-info">
-                  <h2><span>Hey Ladies,</span><br/> Do you have a SPEC?</h2>
-                  <p>Here’s a chance to check just how much of a SPEC your SPEC is.</p>
-                  <Link to="/quiz/female" class="home-spec-info__link">
-                    <span>Take the Quiz</span>
-                    Check the SPEC status of your SPEC
-                  </Link>
-                </div>
-              </div>
+
               <div class="col-md-5">
               <div class="home-spec-info">
                   <h2><span>Hey Guys,</span><br/> Are you a SPEC?</h2>
@@ -45,6 +36,18 @@ function Dashboard(props) {
                   </Link>
                 </div>
               </div>
+              <div class="col-md-5">
+                <div class="home-spec-info">
+                  <h2><span>Hey Ladies,</span><br/> Do you have a SPEC?</h2>
+                  <p>Here’s a chance to check just how much of a SPEC your SPEC is.</p>
+                  <Link to="/quiz/female" class="home-spec-info__link">
+                    <span>Take the Quiz</span>
+                    Check the SPEC status of your SPEC
+                  </Link>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
