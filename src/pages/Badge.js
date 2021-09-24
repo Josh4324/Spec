@@ -60,7 +60,15 @@ export default function Badge(props) {
                     <div class="share-button text-center mt-4">
                         <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and upload</Link>
                         <span class="share-text mt-3 mb-1">Share on:</span> 
-                        <a target="_blank" href={`https://www.facebook.com/sharer.php?imageurl=${window.location.href}/${image}`} className = "share-button mr-2"><i class="fab fa-facebook-square"></i></a> 
+                      
+
+                        <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className = "share-button mr-2"
+            href={`https://www.facebook.com/sharer.php?u=${"/"}?imageurl=${image}`}>
+            <i class="fab fa-facebook-square"></i>
+          </a>
                         <Link to="/" className = "share-button"><i class="fab fa-twitter-square"></i></Link>
             
                     </div>
