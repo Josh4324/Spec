@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Badge(props) {
   let score = props.location.search.slice(7,9);
   let gender = props.location.search.slice(17,);
+  console.log(gender);
   let image;
 
   if (gender === "female"){
@@ -21,6 +22,8 @@ export default function Badge(props) {
   score > 60 && score <= 94 ? "../images/men-badge-specful.png" : 
   score > 94 ? "../images/men-badge-spectacular.png" : null
   }
+
+  console.log(image)
   
 
 
@@ -62,13 +65,10 @@ export default function Badge(props) {
                     
                     <div class="divider"></div>
                     <h2 class="fc-title sec-title text-center pt-50 mb-3">Share your SPEC Status Badge</h2>
-                    {
-                      score <= 10 ? <img src="../images/badge-specless.png" class="spec-badge mb-2"/> : 
-                      score > 10 && score <= 30 ? <img src="../images/badge-specupcoming.png" class="spec-badge mb-2"/> : 
-                      score > 30 && score <= 60 ? <img src="../images/badge-specmaking.png" class="spec-badge mb-2"/> : 
-                      score > 60 && score <= 94 ? <img src="../images/badge-specful.png" class="spec-badge mb-2"/> : 
-                      score > 94 ? <img src="../images/badge-spectacular.png" class="spec-badge mb-2"/> : null
-                    }
+                   {
+                     <img src={image} class="spec-badge mb-2"/>
+                   }
+                   
       
                     <div class="share-button text-center mt-4">
                         <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and upload</Link>
