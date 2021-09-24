@@ -217,7 +217,7 @@ export default function MaleQuiz() {
                       Previous Question
                     </span>
                   </li>
-                  <li
+                  <li  onClick={setQuestion}
                     className={
                       option1State ||
                       option2State ||
@@ -229,7 +229,6 @@ export default function MaleQuiz() {
                     }
                   >
                     <span
-                      onClick={setQuestion}
                       class="js-btn-next"
                       title="NEXT"
                     >
