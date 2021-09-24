@@ -24,6 +24,23 @@ export default function Badge(props) {
   }
 
   console.log(image)
+
+  const share = () => {
+    window.FB.ui(
+      {
+        method: 'share',
+        href: 'https://developers.facebook.com/docs/',
+      },
+      // callback
+      function(response) {
+        if (response && !response.error_message) {
+          alert('Posting completed.');
+        } else {
+          alert('Error while posting.');
+        }
+      }
+    );
+  }
   
 
 
@@ -71,17 +88,13 @@ export default function Badge(props) {
                    
       
                     <div class="share-button text-center mt-4">
-                        <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and upload</Link>
+                        <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and share</Link>
                         <span class="share-text mt-3 mb-1">Share on:</span> 
                       
 
-                        <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className = "share-button mr-2"
-            href={`https://www.facebook.com/sharer.php?u=https://checkspecstatus.com?imageurl=${image}`}>
+                        <span onClick={share}>
             <i class="fab fa-facebook-square"></i>
-          </a>
+          </span>
                         <Link to="/" className = "share-button"><i class="fab fa-twitter-square"></i></Link>
             
                     </div>
