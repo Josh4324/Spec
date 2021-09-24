@@ -2,13 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Badge(props) {
-  let score = props.location.search.slice(7);
-  let image = 
-  score <= 30 ? "../images/badge-specless.png" : 
-  score > 30 && score <= 40 ? "../images/badge-specupcoming.png": 
-  score > 40 && score <= 50 ?  "../images/badge-specmaking.png" : 
-  score > 50 && score <= 60 ? "../images/badge-specful.png" : 
-  score > 60 ? "../images/badge-spectacular.png" : null
+  let score = props.location.search.slice(7,9);
+  let gender = props.location.search.slice(17,);
+  let image;
+
+  if (gender === "female"){
+    image = 
+  score <= 10 ? "../images/badge-specless.png" : 
+  score > 10 && score <= 30 ? "../images/badge-specupcoming.png": 
+  score > 30 && score <= 60 ?  "../images/badge-specmaking.png" : 
+  score > 60 && score <= 94 ? "../images/badge-specful.png" : 
+  score > 94 ? "../images/badge-spectacular.png" : null
+  }else{
+    image = 
+  score <= 10 ? "../images/men-badge-specless.png" : 
+  score > 10 && score <= 30 ? "../images/men-badge-specupcoming.png": 
+  score > 30 && score <= 60 ?  "../images/men-badge-specmaking.png" : 
+  score > 60 && score <= 94 ? "../images/men-badge-specful.png" : 
+  score > 94 ? "../images/men-badge-spectacular.png" : null
+  }
+  
 
 
 
@@ -50,11 +63,11 @@ export default function Badge(props) {
                     <div class="divider"></div>
                     <h2 class="fc-title sec-title text-center pt-50 mb-3">Share your SPEC Status Badge</h2>
                     {
-                      score <= 30 ? <img src="../images/badge-specless.png" class="spec-badge mb-2"/> : 
-                      score > 30 && score <= 40 ? <img src="../images/badge-specupcoming.png" class="spec-badge mb-2"/> : 
-                      score > 40 && score <= 50 ? <img src="../images/badge-specmaking.png" class="spec-badge mb-2"/> : 
-                      score > 50 && score <= 60 ? <img src="../images/badge-specful.png" class="spec-badge mb-2"/> : 
-                      score > 60 ? <img src="../images/badge-spectacular.png" class="spec-badge mb-2"/> : null
+                      score <= 10 ? <img src="../images/badge-specless.png" class="spec-badge mb-2"/> : 
+                      score > 10 && score <= 30 ? <img src="../images/badge-specupcoming.png" class="spec-badge mb-2"/> : 
+                      score > 30 && score <= 60 ? <img src="../images/badge-specmaking.png" class="spec-badge mb-2"/> : 
+                      score > 60 && score <= 94 ? <img src="../images/badge-specful.png" class="spec-badge mb-2"/> : 
+                      score > 94 ? <img src="../images/badge-spectacular.png" class="spec-badge mb-2"/> : null
                     }
       
                     <div class="share-button text-center mt-4">
@@ -66,7 +79,7 @@ export default function Badge(props) {
             target="_blank"
             rel="noopener noreferrer"
             className = "share-button mr-2"
-            href={`https://www.facebook.com/sharer.php?u=${window.location.h}?imageurl=${image}`}>
+            href={`https://www.facebook.com/sharer.php?u=https://checkspecstatus.com?imageurl=${image}`}>
             <i class="fab fa-facebook-square"></i>
           </a>
                         <Link to="/" className = "share-button"><i class="fab fa-twitter-square"></i></Link>

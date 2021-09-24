@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Complete(props) {
   let details;
-  let score = props.location.search.slice(7);
+  console.log(props.location.search)
+  let score = props.location.search.slice(7,9);
+  let gender = props.location.search.slice(17,);
+  console.log(gender)
   if (score <= 30) {
     details =
       "You just dey! Perhaps, all this spec thing no too concern you? you have a long way to go guy, try level up";
@@ -48,19 +51,13 @@ export default function Complete(props) {
                       <label>Instagram/Facebook Profile Link</label>
                       <input type="text" className="form-control" placeholder="" />
                     </div>
-
-                    <div class="form-group">
-                      <label>Email Address</label>
-                      <input type="email" className="form-control" />
-                    </div>
-
                     <div class="form-group">
                       <label>Phone Number</label>
                       <input type="text" className="form-control" />
                     </div>
                     <div class="btn-wrapper text-center">
                       <button class="btn">
-                        <a style={{textDecoration:"none", color:"white"}} href={`/badge?score=${score}`}>CONTINUE</a>
+                        <a style={{textDecoration:"none", color:"white"}} href={`/badge?score=${score}?gender=${gender}`}>CONTINUE</a>
                       </button>
                     </div>
                   </form>

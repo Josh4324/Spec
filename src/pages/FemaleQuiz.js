@@ -48,7 +48,7 @@ export default function FemaleQuiz() {
     }
 
     if (questionNum === 9) {
-      return history.push(`/congrat?score=${score + quesScore}`);
+      return history.push(`/congrat?score=${score + quesScore}?gender=female`);
     }
     let num = questionNum + 1;
     let question = FemaleQuestions[num];

@@ -50,7 +50,7 @@ console.log(check);
     }
 
     if (questionNum === 9) {
-      return history.push(`/congrat?score=${score + quesScore}`);
+      return history.push(`/congrat?score=${score + quesScore}?gender=male`);
     }
     let num = questionNum + 1;
     let question = MaleQuestions[num];
