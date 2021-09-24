@@ -2,8 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Badge(props) {
-  let details;
   let score = props.location.search.slice(7);
+  let image = 
+  score <= 30 ? "../images/badge-specless.png" : 
+  score > 30 && score <= 40 ? "../images/badge-specupcoming.png": 
+  score > 40 && score <= 50 ?  "../images/badge-specmaking.png" : 
+  score > 50 && score <= 60 ? "../images/badge-specful.png" : 
+  score > 60 ? "../images/badge-spectacular.png" : null
+
+
+
+  let details;
+  
   if (score <= 30) {
     details =
       "You just dey! Perhaps, all this spec thing no too concern you? you have a long way to go guy, try level up";
@@ -48,10 +58,11 @@ export default function Badge(props) {
                     }
       
                     <div class="share-button text-center mt-4">
-                        <Link to="/" className = "btn btn-block download-button px-2" >Download your SPEC badge and upload</Link>
+                        <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and upload</Link>
                         <span class="share-text mt-3 mb-1">Share on:</span> 
-                        <Link to="/" className = "share-button mr-2"><i class="fab fa-facebook-square"></i></Link> 
+                        <a target="_blank" href={`https://www.facebook.com/sharer.php?imageurl=${window.location.href}/${image}`} className = "share-button mr-2"><i class="fab fa-facebook-square"></i></a> 
                         <Link to="/" className = "share-button"><i class="fab fa-twitter-square"></i></Link>
+            
                     </div>
                   </div>
                 </div>
