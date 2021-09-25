@@ -90,7 +90,7 @@ export default function Badge(props) {
                    
       
                     <div class="share-button text-center mt-4">
-                        <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and upload</Link>
+                        <Link to={image} target="_blank" download={'badge'}  className = "btn btn-block download-button px-2" >Download your SPEC badge and share</Link>
                         <span class="share-text mt-3 mb-1">Share on:</span> 
                       
 
