@@ -111,12 +111,14 @@ export default function Complete(props) {
         
         </div>
         <div class="footer">
-        <div class="container">
-          <div class="col-md-12">
-            <span>TERMS OF USE/ PRIVACY</span>
+          <div class="container">
+            <Link to="/privacy" style={{color:"white"}}>
+            <div class="col-md-12">
+              <span>TERMS OF USE/ PRIVACY</span>
+            </div>
+            </Link>
           </div>
         </div>
-      </div>
       </div>
     </>
   );
