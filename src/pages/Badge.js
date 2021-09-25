@@ -6,6 +6,7 @@ export default function Badge(props) {
   let gender = props.location.search.slice(17,);
   console.log(gender);
   let image = ""
+  let newimage;
 
   if (gender === "female"){
     image = 
@@ -22,7 +23,25 @@ export default function Badge(props) {
   score > 60 && score <= 94 ? "../images/men-badge-specful.png" : 
   score > 94 ? "../images/men-badge-spectacular.png" : null
   }else{
+    image = ""
+  }
 
+  if (gender === "female"){
+    newimage = 
+  score <= 10 ? "Spec-Less" : 
+  score > 10 && score <= 30 ? "Spec-Upcoming": 
+  score > 30 && score <= 60 ?  "Spec-Making" : 
+  score > 60 && score <= 94 ? "Spec-Ful" : 
+  score > 94 ? "Spec-Tacular.png" : null
+  }else if (gender === "male"){
+    newimage = 
+  score <= 10 ? "Spec-Less" : 
+  score > 10 && score <= 30 ? "Spec-Upcoming": 
+  score > 30 && score <= 60 ?  "Spec-Making" : 
+  score > 60 && score <= 94 ? "Spec-Ful" : 
+  score > 94 ? "Spec-Tacular.png" : null
+  }else{
+    newimage = ""
   }
 
   console.log(image)
@@ -107,6 +126,14 @@ export default function Badge(props) {
             style={{color:"white"}}
             rel="noopener noreferrer"
             className = "share-button mr-3" href={`https://twitter.com/share?text=${window.encodeURI(details)} https://checkspecstatus.com`}><i class="fab fa-twitter-square"></i></a> 
+             <a
+            target="_blank"
+            style={{color:"white"}}
+            rel="noopener noreferrer"
+            className = "share-button mr-3"
+            href={`whatsapp://send?text=I just checked my Spec Status and the result shows that I' am ${newimage}. You can check your spec status at https://checkspecstatus.com`}>
+            <i class="fab fa-whatsapp"></i>
+          </a>
             <a
             target="_blank"
             style={{color:"white"}}
