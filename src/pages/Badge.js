@@ -106,8 +106,7 @@ export default function Badge(props) {
             target="_blank"
             style={{color:"white"}}
             rel="noopener noreferrer"
-            className = "share-button mr-3" href={`https://twitter.com/share?text=${details} https://checkspecstatus.com`}><i class="fab fa-twitter-square"></i></a> 
-
+            className = "share-button mr-3" href={`https://twitter.com/share?text=${window.encodeURI(details)} https://checkspecstatus.com`}><i class="fab fa-twitter-square"></i></a> 
             <a
             target="_blank"
             style={{color:"white"}}
