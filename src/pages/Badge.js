@@ -36,8 +36,8 @@ export default function Badge(props) {
   }else if (gender === "male"){
     newimage = 
   score <= 10 ? "Spec-Less" : 
-  score > 10 && score <= 30 ? "Spec-Upcoming": 
-  score > 30 && score <= 60 ?  "Spec-Making" : 
+  score > 10 && score <= 30 ? "an Upcoming Spec": 
+  score > 30 && score <= 60 ?  "a Spec in the making" : 
   score > 60 && score <= 94 ? "Spec-Ful" : 
   score > 94 ? "Spec-Tacular.png" : null
   }else{
@@ -125,7 +125,7 @@ export default function Badge(props) {
             target="_blank"
             style={{color:"white"}}
             rel="noopener noreferrer"
-            className = "share-button mr-3" href={`https://twitter.com/share?text=${window.encodeURI(details)} https://checkspecstatus.com`}><i class="fab fa-twitter-square"></i></a> 
+            className = "share-button mr-3" href={`https://twitter.com/share?text=I just checked my Spec Status and the result shows that I' am ${newimage}. You can check your spec status at https://checkspecstatus.com`}><i class="fab fa-twitter-square"></i></a> 
              <a
             target="_blank"
             style={{color:"white"}}
