@@ -5,7 +5,7 @@ export default function Badge(props) {
   let score = props.location.search.slice(7,9);
   let gender = props.location.search.slice(17,);
   console.log(gender);
-  let image;
+  let image = ""
 
   if (gender === "female"){
     image = 
@@ -14,13 +14,15 @@ export default function Badge(props) {
   score > 30 && score <= 60 ?  "../images/badge-specmaking.png" : 
   score > 60 && score <= 94 ? "../images/badge-specful.png" : 
   score > 94 ? "../images/badge-spectacular.png" : null
-  }else{
+  }else if (gender === "male"){
     image = 
   score <= 10 ? "../images/men-badge-specless.png" : 
   score > 10 && score <= 30 ? "../images/men-badge-specupcoming.png": 
   score > 30 && score <= 60 ?  "../images/men-badge-specmaking.png" : 
   score > 60 && score <= 94 ? "../images/men-badge-specful.png" : 
   score > 94 ? "../images/men-badge-spectacular.png" : null
+  }else{
+
   }
 
   console.log(image)
@@ -47,19 +49,19 @@ export default function Badge(props) {
 
   let details;
   
-  if (score <= 30) {
+  if (score <= 10) {
     details =
       "You just dey! Perhaps, all this spec thing no too concern you? you have a long way to go guy, try level up";
-  } else if (score > 30 && score <= 40) {
+  } else if (score > 10 && score <= 30) {
     details =
       "Opor!,We know you aspire to be Spec-tacular. You are in line, Keep Grinding!";
-  } else if (score > 40 && score <= 50) {
+  } else if (score > 30 && score <= 60) {
     details =
       "On a low, you suppose be Spec o, but you still ghas do one or two";
-  } else if (score > 50 && score <= 60) {
+  } else if (score > 60 && score <= 94) {
     details =
       "You are not doing bad!, But then, you no for like complete am?, 100% suppose be the goal";
-  } else if (score > 60) {
+  } else if (score > 94) {
     details =
       "Who dey breathe? Spec Overload!, You dey drip glory. E sha never complete";
   }
@@ -94,15 +96,26 @@ export default function Badge(props) {
 
                         <a
             target="_blank"
+            style={{color:"white"}}
             rel="noopener noreferrer"
-            className = "share-button mr-2"
+            className = "share-button mr-3"
             href={`https://www.facebook.com/sharer.php?u=${`https://checkspecstatus.com/images/${image}`}`}>
             <i class="fab fa-facebook-square"></i>
           </a>
                         <a                         
             target="_blank"
+            style={{color:"white"}}
             rel="noopener noreferrer"
-            className = "share-button mr-2" href={`https://twitter.com/share?text=https://checkspecstatus.com/images/${image}`}><i class="fab fa-twitter-square"></i></a> 
+            className = "share-button mr-3" href={`https://twitter.com/share?text=${details} https://checkspecstatus.com`}><i class="fab fa-twitter-square"></i></a> 
+
+            <a
+            target="_blank"
+            style={{color:"white"}}
+            rel="noopener noreferrer"
+            className = "share-button mr-3"
+            href="https://www.instagram.com">
+            <i class="fab fa-instagram"></i>
+          </a>
                     </div>
                   </div>
                 </div>

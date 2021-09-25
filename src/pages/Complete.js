@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useRef} from "react";
+import { NotificationManager } from "react-notifications";
 import { Link } from "react-router-dom";
 
 export default function Complete(props) {
@@ -7,6 +8,23 @@ export default function Complete(props) {
   let score = props.location.search.slice(7,9);
   let gender = props.location.search.slice(17,);
   console.log(gender)
+
+  const profileRef = useRef("");
+  const phoneRef = useRef("");
+
+  const submit = (evt) => {
+    evt.preventDefault();
+    if (profileRef.current.value === ""){
+      return NotificationManager.error("Please enter your instagram / facebook link");
+    }
+
+    if (phoneRef.current.value === ""){
+      return NotificationManager.error("Please enter your phone number")
+    }
+
+    window.location.href = `/badge?score=${score}?gender=${gender}`
+  }
+
   if (score <= 30) {
     details =
       "You just dey! Perhaps, all this spec thing no too concern you? you have a long way to go guy, try level up";
@@ -49,14 +67,14 @@ export default function Complete(props) {
                   <form action="/badge">
                     <div class="form-group">
                       <label>Instagram/Facebook Profile Link</label>
-                      <input type="text" className="form-control" placeholder="" />
+                      <input ref={profileRef} type="text" className="form-control" placeholder="" />
                     </div>
                     <div class="form-group">
                       <label>Phone Number</label>
-                      <input type="text" className="form-control" />
+                      <input ref={phoneRef} type="text" className="form-control" />
                     </div>
                     <div class="btn-wrapper text-center">
-                      <button class="btn">
+                      <button class="btn" onClick={submit}>
                         <a style={{textDecoration:"none", color:"white"}} href={`/badge?score=${score}?gender=${gender}`}>CONTINUE</a>
                       </button>
                     </div>
