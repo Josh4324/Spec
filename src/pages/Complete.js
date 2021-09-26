@@ -1,18 +1,18 @@
 import React, {useRef} from "react";
 import { NotificationManager } from "react-notifications";
 import { Link } from "react-router-dom";
+import { createDetail  } from "../utils/apiCalls";
 
 export default function Complete(props) {
   let details;
   console.log(props.location.search)
   let score = props.location.search.slice(7,9);
   let gender = props.location.search.slice(17,);
-  console.log(gender)
 
   const profileRef = useRef("");
   const phoneRef = useRef("");
 
-  const submit = (evt) => {
+  const submit = async(evt) => {
     evt.preventDefault();
     if (profileRef.current.value === ""){
       return NotificationManager.error("Please enter your instagram / facebook link");
@@ -21,6 +21,14 @@ export default function Complete(props) {
     if (phoneRef.current.value === ""){
       return NotificationManager.error("Please enter your phone number")
     }
+
+    let cred = {
+      social : profileRef.current.value,
+      number: phoneRef.current.value
+    }
+
+    let result = await createDetail(cred);
+    console.log(result);
 
     window.location.href = `/badge?score=${score}?gender=${gender}`
   }

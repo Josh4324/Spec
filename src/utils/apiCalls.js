@@ -47,3 +47,15 @@ export const femaleQuestionOptionCount = async (userCredential) => {
   }
 };
 
+export const createDetail = async (userCredential) => {
+  try {
+    const res = await axios.post(
+      `${http}/api/v1/detail`,
+      userCredential
+    );
+    return res.data.data;
+  } catch (err) {
+    return err.response.data;
+  }
+};
+
