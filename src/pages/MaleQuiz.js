@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NotificationManager } from "react-notifications";
 import { Link, useHistory } from "react-router-dom";
 import { MaleQuestions } from "../data";
+import { maleQuestionCount , maleQuestionOptionCount  } from "../utils/apiCalls";
 import "../style.css";
 export default function MaleQuiz() {
   let history = useHistory();
@@ -10,12 +11,30 @@ export default function MaleQuiz() {
   const [score, setScore] = useState(0);
   const [quesScore, setQuesScore] = useState(0);
   const [answerState, setAnswerState] = useState(false);
+  const [choice, setChoice] = useState("");
   const [buttonState, setButtonState] = useState(false);
   const [option1State, setoption1State] = useState(false);
   const [option2State, setoption2State] = useState(false);
   const [option3State, setoption3State] = useState(false);
   const [option4State, setoption4State] = useState(false);
   const [option5State, setoption5State] = useState(false);
+
+  const countQuestion = async(num) => {
+    console.log("count")
+      const cred = {
+        ques: num
+      }
+     await maleQuestionCount(cred);
+  }
+
+  const countOptions = async(crd, num) => {
+      const cred = {
+          ques: num,
+          [crd]: 1
+      }
+
+      await maleQuestionOptionCount(cred)
+  }
 
   function iOS() {
     return [
@@ -48,11 +67,25 @@ console.log(check);
         "Error"
       );
     }
-
+    let num = questionNum + 1;
+    countQuestion(num);
+    let cred;
+    if (choice === 1){
+      cred = "option1"
+    }else if (choice === 2){
+      cred = "option2"
+    }else if (choice === 3){
+      cred = "option3"
+    }else if (choice === 4){
+      cred = "option4"
+    }else if (choice === 5){
+      cred = "option5"
+    }
+    countOptions(cred, num);
     if (questionNum === 9) {
       return history.push(`/congrat?score=${score + quesScore}?gender=male`);
     }
-    let num = questionNum + 1;
+    
     let question = MaleQuestions[num];
     setQuestionNum(num);
     setCurrent(null);
@@ -68,6 +101,7 @@ console.log(check);
     let prevScore = score;
     let newScore = prevScore + quesScore;
     setScore(newScore);
+    
   };
   const getScore = (scoreObj, num) => {
     let currScore = Object.values(scoreObj)[0];
@@ -105,6 +139,8 @@ console.log(check);
       setoption4State(false);
       setoption5State(true);
     }
+
+    setChoice(num)
   };
   const topFunction = () => {
     document.body.scrollTop = 0; // For Safari

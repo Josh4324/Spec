@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NotificationManager } from "react-notifications";
 import { Link, useHistory } from "react-router-dom";
 import { FemaleQuestions } from "../data";
+import { femaleQuestionCount,femaleQuestionOptionCount   } from "../utils/apiCalls";
 import "../style.css";
 export default function FemaleQuiz() {
   let history = useHistory();
@@ -25,6 +26,7 @@ export default function FemaleQuiz() {
   const [questionNum, setQuestionNum] = useState(0);
   const [current, setCurrent] = useState(FemaleQuestions[0]);
   const [score, setScore] = useState(0);
+  const [choice, setChoice] = useState("");
   const [quesScore, setQuesScore] = useState(0);
   const [answerState, setAnswerState] = useState(false);
   const [buttonState, setButtonState] = useState(false);
@@ -33,6 +35,23 @@ export default function FemaleQuiz() {
   const [option3State, setoption3State] = useState(false);
   const [option4State, setoption4State] = useState(false);
   const [option5State, setoption5State] = useState(false);
+
+  const countQuestion = async(num) => {
+    console.log("count")
+      const cred = {
+        ques: num
+      }
+     await femaleQuestionCount(cred);
+  }
+
+  const countOptions = async(crd, num) => {
+      const cred = {
+          ques: num,
+          [crd]: 1
+      }
+
+      await femaleQuestionOptionCount(cred)
+  }
 
   useEffect(() => {
     topFunction();
@@ -46,11 +65,25 @@ export default function FemaleQuiz() {
         "Error"
       );
     }
-
+    let num = questionNum + 1;
+    countQuestion(num);
+    let cred;
+    if (choice === 1){
+      cred = "option1"
+    }else if (choice === 2){
+      cred = "option2"
+    }else if (choice === 3){
+      cred = "option3"
+    }else if (choice === 4){
+      cred = "option4"
+    }else if (choice === 5){
+      cred = "option5"
+    }
+    countOptions(cred, num);
     if (questionNum === 9) {
       return history.push(`/congrat?score=${score + quesScore}?gender=female`);
     }
-    let num = questionNum + 1;
+    
     let question = FemaleQuestions[num];
     setQuestionNum(num);
     setCurrent(null);
@@ -103,6 +136,7 @@ export default function FemaleQuiz() {
       setoption4State(false);
       setoption5State(true);
     }
+    setChoice(num)
   };
   const topFunction = () => {
     document.body.scrollTop = 0; // For Safari
