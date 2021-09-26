@@ -18,7 +18,6 @@ function Privacy(props) {
             </Link>
           </div>
         </header>
-
         <div class="main">
           <div class="container">
             <div class="row justify-content-center">
