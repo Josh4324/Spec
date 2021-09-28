@@ -97,7 +97,7 @@ export default function Badge(props) {
                 </div>
                 <div class="col-6 text-right">
                 <Link to="/" className = "logo">
-                    <img src="i../mages/logo.svg"/>
+                    <img src="../images/logo.png"/>
                 </Link>
                 </div>
             </div>
