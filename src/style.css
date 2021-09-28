@@ -382,7 +382,7 @@ multistep css
 }
 
 .wizard-forms {
-  padding: 90px 0px;
+  padding: 90px 0px 50px 0px;
 }
 
 .quiz-title {
@@ -409,7 +409,7 @@ multistep css
   margin: 0 auto;
   max-width: 1135px;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
 .quiz-option-selector li {
   width: 33%;
